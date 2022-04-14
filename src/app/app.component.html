@@ -1,0 +1,17 @@
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <canvas #confetti></canvas>
+  <div class="overlay" (click)="boom($event)"></div>
+  <img class="ship" [class.moving]="isShip" src="../assets/ship2.png" />
+  <img class="shrek spinning" src="../assets/shrek6.png" />
+  <img class="shrek2" src="../assets/shrek6.png" />
+
+  <div class="text card" fxLayout="column" fxLayoutAlign="center center">
+    <h1 class="title">CONGATULATION {{ "{BEANS}" }}</h1>
+    <h3 class="subtitle">You have won {{ "{prize}" }}</h3>
+    <div>
+      <span class="btn flashing" (click)="claim($event)"
+        >CLICK HERE TO CLAIM</span
+      >
+    </div>
+  </div>
+</div>
