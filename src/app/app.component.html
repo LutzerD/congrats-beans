@@ -1,13 +1,31 @@
 <div class="container" fxLayout="row" fxLayoutAlign="center center">
   <canvas #confetti></canvas>
   <div class="overlay" (click)="boom($event)"></div>
-  <img class="ship" [class.moving]="isShip" src="../assets/ship2.png" />
-  <img class="shrek spinning" src="../assets/shrek6.png" />
-  <img class="shrek2" src="../assets/shrek6.png" />
+  <img class="ship" [class.moving]="isShip" src="assets/ship2.png" />
+  <img
+    [class.hidden]="!partyTime"
+    class="shrek spinning"
+    src="assets/shrek6.png"
+  />
+  <img [class.hidden]="!partyTime" class="shrek2" src="assets/shrek6.png" />
+  <img [class.hidden]="partyTime" class="bottomShrek" src="assets/shrek6.png" />
 
   <div class="text card" fxLayout="column" fxLayoutAlign="center center">
     <h1 class="title">CONGATULATION {{ "{BEANS}" }}</h1>
-    <h3 class="subtitle">You have won {{ "{prize}" }}</h3>
+    <div class="subtitle" fxLayout="row" fxLayoutAlign="center center">
+      <div class="yagoin">You are going to &nbsp;</div>
+      <div class="wavy">
+        <span style="--i: 1">P</span>
+        <span style="--i: 2">O</span>
+        <span style="--i: 3">R</span>
+        <span style="--i: 4">T</span>
+        <span style="--i: 5">L</span>
+        <span style="--i: 6">A</span>
+        <span style="--i: 7">N</span>
+        <span style="--i: 8">D</span>
+      </div>
+    </div>
+
     <div>
       <span class="btn flashing" (click)="claim($event)"
         >CLICK HERE TO CLAIM</span
