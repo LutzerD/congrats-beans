@@ -33,7 +33,7 @@
   white-space: nowrap;
 }
 .shrek{
-  position: absolute;
+  position: fixed;
   height: 30%;
   top:50%;
   margin-left:-30%;
@@ -41,7 +41,7 @@
 }
 
 .shrek2{
-  position: absolute;
+  position: fixed;
   height: 30%;
   top:50%;
   margin-left:30%;
@@ -53,7 +53,7 @@
 }
 
 .bottomShrek{
-  position: absolute;
+  position: fixed;
   height: 100%;
   top: 70%;
   overflow: hidden;
@@ -63,7 +63,7 @@
 }
 
 .ship{
-  position:absolute;
+  position:fixed;
   top:-100%;
   max-width: 30%;
   z-index:3;
@@ -85,6 +85,7 @@
   padding:2em;
   max-width: 90%;
 }
+
 .moving{
   animation: linear infinite;
   animation-name: run;
