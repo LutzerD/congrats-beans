@@ -4,6 +4,6 @@ body{margin:0;}
 html, body{
   height: 100%;
   width: 100%;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
   overflow:hidden;
 }

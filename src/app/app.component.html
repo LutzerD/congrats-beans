@@ -1,14 +1,10 @@
 <div class="container" fxLayout="row" fxLayoutAlign="center center">
-  <canvas #confetti></canvas>
-  <div class="overlay" (click)="boom($event)"></div>
+  <canvas [class.front2]="partyTime" #confetti (click)="boom($event)"></canvas>
+  <div class="overlay" [class.front1]="partyTime" (click)="boom($event)"></div>
   <img class="ship" [class.moving]="isShip" src="assets/ship2.png" />
-  <img
-    [class.hidden]="!partyTime"
-    class="shrek spinning"
-    src="assets/shrek6.png"
-  />
-  <img [class.hidden]="!partyTime" class="shrek2" src="assets/shrek6.png" />
-  <img [class.hidden]="partyTime" class="bottomShrek" src="assets/shrek6.png" />
+  <img *ngIf="partyTime" class="shrek spinning" src="assets/shrek6.png" />
+  <img *ngIf="partyTime" class="shrek2" src="assets/shrek6.png" />
+  <img class="bottomShrek" src="assets/shrek6.png" />
 
   <div class="text card" fxLayout="column" fxLayoutAlign="center center">
     <h1 class="title">CONGATULATION {{ "{BEANS}" }}</h1>
